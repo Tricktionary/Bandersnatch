@@ -17,6 +17,11 @@
             {% if choice_b_description %}
                 <button id="choice_b" class="ui inverted red button"> Choice B : {{choice_b_description}} </button>
             {% endif %}
+
+            {% if end_stage %}
+                <button id="new_game" class="ui inverted green button">New Game?</button>
+            {% endif %}
+            
             {% csrf_token %}
         </center>
     </body>
@@ -42,5 +47,17 @@
                 }
             })
         });
+
+        $("#new_game").click(function(){
+            $.ajax({
+                url: "/new_game/",
+                type: "post",
+                success: function(response){
+                    console.log(response)
+                    location.reload();
+                }
+            })
+        });
+
     </script>
 </html>

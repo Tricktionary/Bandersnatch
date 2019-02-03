@@ -21,19 +21,21 @@ def stage(request):
             'stage_description':stage.description,
             'choice_a_description':choice_a.description,
             'choice_b_description':choice_b.description,
+            'end_stage':stage.end_stage,
         }
     else:
         context={
             'stage_description':stage.description,
             'choice_a_description':"",
             'choice_b_description':"",
+            'end_stage':stage.end_stage,
         }
     return render(request, 'core/stage.html', context=context)
 
 @csrf_exempt
 def stage_a(request):
     player = Player.objects.get(user=request.user)
-    game = Game.objects.get(player=player)
+    game = Game.objects.get(player=player,game_number=player.game_number)
     stage = game.stage
     
     next_stage = game.stage.a_stage
@@ -45,7 +47,7 @@ def stage_a(request):
 @csrf_exempt
 def stage_b(request):
     player = Player.objects.get(user=request.user)
-    game = Game.objects.get(player=player)
+    game = Game.objects.get(player=player,game_number=player.game_number)
     stage = game.stage
     
     next_stage = game.stage.b_stage
@@ -54,7 +56,8 @@ def stage_b(request):
 
     return HttpResponse(200)
 
-def end_game(request):
+@csrf_exempt
+def new_game(request):
     player = Player.objects.get(user=request.user)
     player.game_number += 1
     player.save()
@@ -63,4 +66,4 @@ def end_game(request):
     game = Game.objects.create(player=player,stage=stage,end=False,game_number=player.game_number)
     game.save()
 
-    return game
+    return HttpResponse(200)

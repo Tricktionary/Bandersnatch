@@ -27,4 +27,5 @@ urlpatterns = [
     path('stage/',stage.stage,name="Stage"),
     path('stage/a/',stage.stage_a,name="Choose Stage A"),
     path('stage/b/',stage.stage_b,name="Choose Stage B"),
+    path('new_game/',stage.new_game,name="New Game"),
 ]
