@@ -9,7 +9,7 @@ class Player(models.Model):
     email = models.CharField(max_length=400)
 
     def __str__(self):
-        return self.player.email
+        return self.email
 
 class Game(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
@@ -23,8 +23,9 @@ class Game(models.Model):
 class Stage(models.Model):    
     description = models.CharField(max_length=400)
     
-    stage_a = models.ManyToManyField('self')
-    stage_b = models.ManyToManyField('self')
+    stage_a = models.ManyToManyField('self',blank=True)
+    stage_b = models.ManyToManyField('self',blank=True)
+    end_stage = models.BooleanField(default=False)
 
     def __str__(self):
         return self.description
