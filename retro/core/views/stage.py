@@ -6,6 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 
 from ..models import *
+
 @authenticated_as_player
 def stage(request):
     player = Player.objects.get(user=request.user)
