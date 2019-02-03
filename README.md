@@ -7,7 +7,8 @@ A re-make of netflix's bandersnatch game as a web app created with Django. This 
 
 ### Possible Paths 
 
-![Path](images/paths.jpg)
+![Path](images/paths.jpg) 
+These are all the possible [paths](https://www.polygon.com/2018/12/29/18159525/black-mirror-bandersnatch-all-endings-guide-netflix) in the game
 
 ### Getting Started
 - Make sure you have [python3](https://www.python.org/download/releases/3.0/) installed on your machine 
