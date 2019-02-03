@@ -19,7 +19,7 @@ class Game(models.Model):
     game_number = models.IntegerField(blank=True, default=0)
 
     def __str__(self):
-        return self.player.email 
+        return str(self.game_number) + " - "+ self.player.email + " - "+ self.stage.description  
 
 class Stage(models.Model):    
     description = models.CharField(max_length=400)
