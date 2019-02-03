@@ -25,7 +25,7 @@
         form.submit(function (event) {
             var url = '/login/submit/'
             var spinner = $('.submit-button')
-            submitForm(event, url, form, spinner, { redirect: '/stage'})
+            submitForm(event, url, form, spinner, { redirect: '/stage'},function(){console.log("OOps")})
         })
     })()
 </script>

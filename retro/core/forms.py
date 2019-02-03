@@ -64,7 +64,7 @@ class LoginForm(forms.ModelForm):
         return password
 
     def clean(self):
-        cleaned_data = super(LogInForm, self).clean()
+        cleaned_data = super(LoginForm, self).clean()
         email = cleaned_data.get('email')
         password = cleaned_data.get('password')
         if email and password:

@@ -13,8 +13,8 @@ urlpatterns = [
     path('',home_page.home_page, name="Home"),
 
     path('login/',login.login_page,name="Login Page"),
-    path('login/submit',login.login_submit,name="Login Submit"),
+    path('login/submit/',login.login_submit,name="Login Submit"),
     path('signup/',signup.signup_page,name="Signup Page"),
-    path('signup/submit',signup.signup_submit,name="Signup Submit"),
+    path('signup/submit/',signup.signup_submit,name="Signup Submit"),
     path('stage/',stage.stage,name="Stage")
 ]
