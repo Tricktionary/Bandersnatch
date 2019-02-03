@@ -29,6 +29,7 @@ def signup_submit(request):
     
         if user is not None:
             player = create_player(user, email)
+            game = create_new_game(player)
             login(request, user)
         else:
             print('USER WAS NONE ')
@@ -52,3 +53,9 @@ def create_user(email, password):
 def create_player(user, email):
     player = Player.objects.create(user=user, email=email)
     return player
+
+def create_new_game(player):
+    stage = Stage.objects.get(root=True)
+    game = Game.objects.create(player=player,stage=stage,end=False)
+    game.save()
+    return game

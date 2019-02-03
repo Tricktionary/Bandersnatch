@@ -7,22 +7,24 @@ from django.contrib.auth.models import User
 class Player(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.CharField(max_length=400)
+    game_number = models.IntegerField(blank=True, default=0)
 
     def __str__(self):
         return self.email
 
 class Game(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
-    stage = models.ManyToManyField('Stage', blank=True)
+    stage = models.ForeignKey('Stage',on_delete=models.CASCADE, blank=True)
     end = models.BooleanField(default=False)
+    game_number = models.IntegerField(blank=True, default=0)
 
     def __str__(self):
-        return self.player.email
-
+        return self.player.email 
 
 class Stage(models.Model):    
     description = models.CharField(max_length=400)
-    
+    root = models.BooleanField(default=False)
+
     stage_a = models.ManyToManyField('self',blank=True)
     stage_b = models.ManyToManyField('self',blank=True)
     end_stage = models.BooleanField(default=False)
@@ -35,6 +37,6 @@ class Choice(models.Model):
     stage = models.ForeignKey(Stage,on_delete=models.CASCADE)
     choice_a = models.BooleanField(default=False)
     choice_b = models.BooleanField(default=False)
-
+    
     def __str__(self):
         return self.description

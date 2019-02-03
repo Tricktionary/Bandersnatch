@@ -17,6 +17,9 @@ urlpatterns = [
     path('login/submit/',login.login_submit,name="Login Submit"),
     path('signup/',signup.signup_page,name="Signup Page"),
     path('signup/submit/',signup.signup_submit,name="Signup Submit"),
-    path('stage/',stage.stage,name="Stage")
-
+    
+    #Stage Paths
+    path('stage/',stage.stage,name="Stage"),
+    path('stage/a/',stage.stage_a,name="Choose Stage A"),
+    path('stage/b/',stage.stage_b,name="Choose Stage B"),
 ]
