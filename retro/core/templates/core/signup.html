@@ -6,9 +6,15 @@
     </head>
     <body>
         <div class="container"> 
-            <form> 
-                {% include 'core/snippets/form.html' with form=signup_form %}
-            </form>
+             
+            <div class="half-page padding-top margin-left"> 
+                <h2>Sign up</h2>
+                <form> 
+                    {% include 'core/snippets/form.html' with form=signup_form %}
+                </form>
+                <a class="ui button margin-top-small">Submit</a>
+            </div>
+            
         </div>
     </body>
 </html>

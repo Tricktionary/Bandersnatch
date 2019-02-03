@@ -34,3 +34,38 @@ class SignUpForm(forms.ModelForm):
         if len(password) < 8:
             raise forms.ValidationError('Password must be at least 8 characters long.')
         return password
+
+class LoginForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['email', 'password']
+        labels = {
+            'email': 'Email',
+            'password': 'Password',
+        }
+        widgets = {
+            'password': forms.PasswordInput(),
+        }
+
+    def clean_email(self):
+        email = self.cleaned_data['email'].lower()
+        if not User.objects.filter(email=email).exists():
+            raise forms.ValidationError('Email does not correspond to an account.')
+        return email
+
+    def clean_password(self):
+        password = self.cleaned_data['password']
+        if len(password) < 8:
+            raise forms.ValidationError('Password is at least 8 characters long.')
+        return password
+
+    def clean(self):
+        cleaned_data = super(LogInForm, self).clean()
+        email = cleaned_data.get('email')
+        password = cleaned_data.get('password')
+        if email and password:
+            if User.objects.filter(email=email).exists():
+                user = User.objects.get(email=email)
+                if not user.check_password(password):
+                    error = forms.ValidationError('Incorrect password.')
+                    self.add_error('password', error)

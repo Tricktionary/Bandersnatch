@@ -5,6 +5,16 @@
         <title>Bandersnatch - Login</title>
     </head>
     <body>
-        
+        <div class="container"> 
+            
+            <div class="half-page padding-top margin-left"> 
+                <h2>Login</h2>
+                <form> 
+                    {% include 'core/snippets/form.html' with form=login_form %}
+                </form>
+                <a class="ui button margin-top-small">Submit</a>
+            </div>
+
+        </div>
     </body>
 </html>
