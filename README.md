@@ -46,7 +46,7 @@ This is the basic model for the database
 
 ### Admin User 
 - User: `andybui`
-- Password: `Fivestar54`
+- Password: `password2018`
 -->
 
  
