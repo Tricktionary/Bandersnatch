@@ -1,9 +1,13 @@
 # Bandersnatch
 
-![Schema](images/netflix.jpg)  
+![Bandersnatch Picture](images/netflix.jpg)  
 
 ### What is this? 
 A re-make of netflix's bandersnatch game as a web app created with Django. This is essentially a choose your own adventure book. All of the paths are taken from the netflix show. 
+
+### Possible Paths 
+
+![Path](images/paths.jpg)
 
 ### Getting Started
 - Make sure you have [python3](https://www.python.org/download/releases/3.0/) installed on your machine 
