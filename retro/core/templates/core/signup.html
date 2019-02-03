@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        {% include 'core/snippets/base.html' %}
+        <title>Bandersnatch - Signup</title>
+    </head>
+    <body>
+        <div class="container"> 
+            <form> 
+                {% include 'core/snippets/form.html' with form=signup_form %}
+            </form>
+        </div>
+    </body>
+</html>

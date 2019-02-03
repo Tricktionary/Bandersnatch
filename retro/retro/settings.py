@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Added by me 
     'core',
-    
 ]
 
 MIDDLEWARE = [
@@ -73,6 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'retro.wsgi.application'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'core/static'),
+]
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases

@@ -1,0 +1,13 @@
+{% load static %}
+{% csrf_token %}
+
+<div class="center"> 
+    <div class="ui form">
+        {% for field in form %}
+            <div class="field">
+                <label for="{{ field.id_for_label }}">{{field.label|default:False}}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
