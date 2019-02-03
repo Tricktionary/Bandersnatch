@@ -3,12 +3,12 @@
 ![Bandersnatch Picture](images/netflix.jpg)  
 
 ### What is this? 
-A re-make of netflix's bandersnatch game as a web app created with Django. This is essentially a choose your own adventure book. All of the paths are taken from the netflix show. 
+A re-make of netflix's bandersnatch game as a web app created with Django. This is essentially a choose your own adventure book. All of the paths are based around netflix show. 
 
-### Possible Paths 
+### Possible Paths
 
 ![Path](images/paths.jpg) 
-These are all the possible [paths](https://www.polygon.com/2018/12/29/18159525/black-mirror-bandersnatch-all-endings-guide-netflix) in the game
+These are the inspiration to all the possible [paths](https://www.polygon.com/2018/12/29/18159525/black-mirror-bandersnatch-all-endings-guide-netflix) in the game
 
 ### Getting Started
 - Make sure you have [python3](https://www.python.org/download/releases/3.0/) installed on your machine and [pip](https://pip.pypa.io/en/stable/installing/)
