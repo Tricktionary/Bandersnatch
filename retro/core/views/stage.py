@@ -32,10 +32,9 @@ def stage_a(request):
     game = Game.objects.get(player=player)
     stage = game.stage
     
-    next_stage = game.stage.stage_a
-
-    obj,created = Game.objects.update_or_create(player=player,stage=next_stage, end=next_stage.end_stage,game_number=player.game_number)
-
+    next_stage = Stage.objects.get(id=game.stage.stage_b.id)
+    game.stage = next_stage
+    game.save()
 
     if next_stage.end_stage == False:
         choice_a = Choice.objects.get(stage=stage,choice_a=True)
@@ -60,10 +59,9 @@ def stage_b(request):
     game = Game.objects.get(player=player)
     stage = game.stage
     
-    next_stage = game.stage.stage_b
-
-    obj,created = Game.objects.update_or_create(player=player,stage=next_stage, end=next_stage.end_stage,game_number=player.game_number)
-
+    next_stage = Stage.objects.get(id=game.stage.stage_b.id)
+    game.stage = next_stage
+    game.save()
 
     if next_stage.end_stage == False:
         choice_a = Choice.objects.get(stage=stage,choice_a=True)

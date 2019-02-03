@@ -25,8 +25,9 @@ class Stage(models.Model):
     description = models.CharField(max_length=400)
     root = models.BooleanField(default=False)
 
-    stage_a = models.ManyToManyField('self',blank=True)
-    stage_b = models.ManyToManyField('self',blank=True)
+    a_stage = models.ForeignKey('self', on_delete=models.CASCADE, related_name='stage_a', blank=True)
+    b_stage = models.ForeignKey('self', on_delete=models.CASCADE, related_name='stage_b', blank=True)
+
     end_stage = models.BooleanField(default=False)
 
     def __str__(self):
