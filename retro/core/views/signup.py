@@ -14,3 +14,6 @@ def signup_page(request):
         'signup_form': signup_form
     }
     return render(request, 'core/signup.html', context=context)
+
+def signup_submit(request):
+    return

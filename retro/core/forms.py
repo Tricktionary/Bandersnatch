@@ -5,6 +5,10 @@ from django.http import JsonResponse
 from django.utils.safestring import mark_safe
 
 
+def serialized_form_errors(form):
+    errors = dict([(key, [str(error) for error in value]) for key, value in form.errors.items()])
+    return JsonResponse({'errors': errors, })
+
 class SignUpForm(forms.ModelForm):
     class Meta:
         model = User

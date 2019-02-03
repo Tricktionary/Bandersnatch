@@ -9,12 +9,23 @@
              
             <div class="half-page padding-top margin-left"> 
                 <h2>Sign up</h2>
-                <form> 
+                <form class="signup_form"> 
                     {% include 'core/snippets/form.html' with form=signup_form %}
+                    <button class="ui button margin-top-small submit-button">Submit</button>
+                    <a class="ui button margin-top-small" href="/">Back</a>
                 </form>
-                <a class="ui button margin-top-small">Submit</a>
+                 
             </div>
-            
         </div>
     </body>
 </html>
+<script>
+    (function () {
+        var form = $(".signup_form")
+        form.submit(function (event) {
+            var url = '/signup/submit/'
+            var spinner = $('.submit-button')
+            submitForm(event, url, form, spinner, { redirect: '/stage'})
+        })
+    })()
+</script>
