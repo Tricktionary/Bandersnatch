@@ -16,6 +16,8 @@ These are the inspiration to all the possible [paths](https://www.polygon.com/20
 - Get into the retro folder `cd retro` and then `python3 manage.py runserver`
 - Navigate to `http://localhost:8000/` to create a user and play Bandersnatch
 
+### Personalizing 
+- Feel free to fork this project and create your own stories! The database model is 
 <!--
 ### Usefull Development Commands 
 - `source env/bin/activate`
