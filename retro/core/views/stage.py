@@ -32,7 +32,7 @@ def stage_a(request):
     game = Game.objects.get(player=player)
     stage = game.stage
     
-    next_stage = Stage.objects.get(id=game.stage.stage_b.id)
+    next_stage = game.stage.a_stage
     game.stage = next_stage
     game.save()
 
@@ -59,7 +59,7 @@ def stage_b(request):
     game = Game.objects.get(player=player)
     stage = game.stage
     
-    next_stage = Stage.objects.get(id=game.stage.stage_b.id)
+    next_stage = game.stage.b_stage
     game.stage = next_stage
     game.save()
 
