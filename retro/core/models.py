@@ -19,9 +19,21 @@ class Game(models.Model):
     def __str__(self):
         return self.player.email
 
-class Stage(models.Model):
+
+class Stage(models.Model):    
     description = models.CharField(max_length=400)
-    choices = models.ManyToManyField('Choice', blank=True)
+    
+    stage_a = models.ManyToManyField('self')
+    stage_b = models.ManyToManyField('self')
+
+    def __str__(self):
+        return self.description
 
 class Choice(models.Model):
     description = models.CharField(max_length=200)
+    stage = models.ForeignKey(Stage,on_delete=models.CASCADE)
+    choice_a = models.BooleanField(default=False)
+    choice_b = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.description
