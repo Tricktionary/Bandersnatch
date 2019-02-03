@@ -11,7 +11,7 @@ A re-make of netflix's bandersnatch game as a web app created with Django. This 
 - From the root directory run `source env/bin/activate`
 - Get into the retro folder `cd retro` and then `python3 manage.py runserver`
 - Navigate to `http://localhost:8000/` to create a user and play Bandersnatch
-- You then should see this after you create your user ![screenshot](image/screenshot.png)
+- You then should see this after you create your user ![screenshot](images/screenshot.png)
 
 ### Possible Paths
 
