@@ -3,7 +3,7 @@
 ![Bandersnatch Picture](images/netflix.jpg)  
 
 ### What is this? 
-A re-make of netflix's bandersnatch game as a web app created with Django. This is essentially a choose your own adventure book. All of the paths are based around netflix show. 
+A re-make of netflix's bandersnatch game as a web app created with Django. This is essentially a choose your own adventure book. All of the paths are based around netflix show black mirrow episode "Bandersnatch". This currently comes pre-loaded with one story that I created. a future feature set will be to give users the ability to create their own stories. 
 
 ### Possible Paths
 
