@@ -18,6 +18,11 @@ These are the inspiration to all the possible [paths](https://www.polygon.com/20
 
 ### Personalizing 
 - Feel free to fork this project and create your own stories! The database model is 
+
+### Planned Features
+- Create a story dashboard for admin
+- Host on Heroku
+
 <!--
 ### Usefull Development Commands 
 - `source env/bin/activate`
@@ -29,6 +34,3 @@ These are the inspiration to all the possible [paths](https://www.polygon.com/20
 - User: `andybui`
 - Password: `Fivestar54`
 -->
-
-### Future Feature
-- Create a story dashboard for admin
