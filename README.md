@@ -32,10 +32,11 @@ This is the basic model for the database
 - Create a story dashboard for admin
 - Host on Heroku
 
+ 
+<!--
 ## To Do 
 - Get Next stage to work
 
-<!--
 ### Usefull Development Commands 
 - `source env/bin/activate`
 - `python3 manage.py runserver`
