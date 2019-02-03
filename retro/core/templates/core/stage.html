@@ -10,15 +10,36 @@
             <h3>Description: {{stage_description}}</h3>
 
             {% if choice_a_description %}
-                <a id="choice_a" href="/stage/a/" class="ui inverted blue button"> Choice A: {{choice_a_description}}</a>
+                <button id="choice_a" class="ui inverted blue button"> Choice A: {{choice_a_description}}</button>
             {% endif %}
 
             {% if choice_b_description %}
-                <a id="choice_b" href="/stage/b/" class="ui inverted red button"> Choice B : {{choice_b_description}} </a>
+                <button id="choice_b" class="ui inverted red button"> Choice B : {{choice_b_description}} </button>
             {% endif %}
+            {% csrf_token %}
         </center>
     </body>
     <script>
-        
+        $("#choice_a").click(function(){
+            $.ajax({
+                url: "/stage/a/",
+                type: "post",
+                success: function(response){
+                    console.log(response)
+                    location.reload();
+                }
+            })
+        });
+
+        $("#choice_b").click(function(){
+            $.ajax({
+                url: "/stage/b/",
+                type: "post",
+                success: function(response){
+                    console.log(response)
+                    location.reload();
+                }
+            })
+        });
     </script>
 </html>

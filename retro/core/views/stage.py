@@ -2,6 +2,8 @@ from django.conf import settings
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from .decorators import authenticated_as_player
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 from ..models import *
 @authenticated_as_player
@@ -27,6 +29,7 @@ def stage(request):
         }
     return render(request, 'core/stage.html', context=context)
 
+@csrf_exempt
 def stage_a(request):
     player = Player.objects.get(user=request.user)
     game = Game.objects.get(player=player)
@@ -36,24 +39,9 @@ def stage_a(request):
     game.stage = next_stage
     game.save()
 
-    if next_stage.end_stage == False:
-        choice_a = Choice.objects.get(stage=stage,choice_a=True)
-        choice_b = Choice.objects.get(stage=stage,choice_b=True)
-        
-        context={
-            'stage_description':stage.description,
-            'choice_a_description':choice_a.description,
-            'choice_b_description':choice_b.description,
-        }
-    else:
-        context={
-            'stage_description':stage.description,
-            'choice_a_description':"",
-            'choice_b_description':"",
-        }
-    return render(request, 'core/stage.html', context=context)
+    return HttpResponse(200)
 
-
+@csrf_exempt
 def stage_b(request):
     player = Player.objects.get(user=request.user)
     game = Game.objects.get(player=player)
@@ -63,22 +51,7 @@ def stage_b(request):
     game.stage = next_stage
     game.save()
 
-    if next_stage.end_stage == False:
-        choice_a = Choice.objects.get(stage=stage,choice_a=True)
-        choice_b = Choice.objects.get(stage=stage,choice_b=True)
-        
-        context={
-            'stage_description':stage.description,
-            'choice_a_description':choice_a.description,
-            'choice_b_description':choice_b.description,
-        }
-    else:
-        context={
-            'stage_description':stage.description,
-            'choice_a_description':"",
-            'choice_b_description':"",
-        }
-    return render(request, 'core/stage.html', context=context)
+    return HttpResponse(200)
 
 def end_game(request):
     player = Player.objects.get(user=request.user)

@@ -36,6 +36,7 @@ This is the basic model for the database
 <!--
 ## To Do 
 - Get Next stage to work
+- Render page after update
 
 ### Usefull Development Commands 
 - `source env/bin/activate`
