@@ -12,16 +12,17 @@ A re-make of netflix's bandersnatch game as a web app created with Django. This 
 - Get into the retro folder `cd retro` and then `python3 manage.py runserver`
 - Navigate to `http://localhost:8000/` to create a user and play Bandersnatch
 - You then should see this after you create your user !
-<img src="images/screenshot.png" width="100" height="100">
+<img src="images/screenshot.png" width="400" height="400">
 
 ### Possible Paths
 
-<img src="images/paths.jpg" width="100" height="200">
+<img src="images/paths.jpg" width="200" height="600">
 
 These are the inspiration to all the possible [paths](https://www.polygon.com/2018/12/29/18159525/black-mirror-bandersnatch-all-endings-guide-netflix) in the game
 
 ### Database Model
-![Model](images/model.png)
+<img src="images/model.png" width="300" height="300">
+
 This is the basic model for the database
 
 ### Personalizing 
