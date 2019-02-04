@@ -20,14 +20,10 @@ A re-make of netflix's bandersnatch game as a web app created with Django. This 
 
 These are the inspiration to all the possible [paths](https://www.polygon.com/2018/12/29/18159525/black-mirror-bandersnatch-all-endings-guide-netflix) in the game
 
-### Database Model
-<img src="images/model.png" width="300" height="300">
-
-This is the basic model for the database
-
 ### Personalizing 
-- Feel free to fork this project and create your own stories! The database model is 
-
+- Feel free to fork this project and create your own stories! The database model is the image below. To add new stages think of it as a binary tree.
+<img src="images/model.png" width="300" height="300">
+ 
 ### Planned Features
 - Create a story dashboard for admin
 - Host on Heroku
