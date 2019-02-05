@@ -2,7 +2,7 @@
 
 <img src="images/netflix.jpg" width="1000" height="500">
 
-### What is Bandersnatch 
+### What is Bandersnatch?
 
 Black Mirror: Bandersnatch is a 2018 interactive film in the science fiction anthology series Black Mirror. It was written by series creator Charlie Brooker and directed by David Slade. Netflix released the standalone film on 28 December 2018.
 
