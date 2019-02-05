@@ -2,6 +2,12 @@
 
 <img src="images/netflix.jpg" width="1000" height="500">
 
+### What is Bandersnatch 
+
+Black Mirror: Bandersnatch is a 2018 interactive film in the science fiction anthology series Black Mirror. It was written by series creator Charlie Brooker and directed by David Slade. Netflix released the standalone film on 28 December 2018.
+
+In Bandersnatch, viewers make decisions for the main character, the young programmer Stefan Butler (Fionn Whitehead) who is adapting a fantasy choose-your-own-adventure novel into a video game in 1984. Other characters include Mohan Thakur (Asim Chaudhry) and Colin Ritman (Will Poulter), both of whom work at a video game company, Butler's father, Peter (Craig Parkinson) and Butler's therapist, Dr. Haynes (Alice Lowe). The film is based on a planned Imagine Software video game of the same name which went unreleased after the company filed for bankruptcy. It also alludes to Lewis Carroll's own works that feature the bandersnatch creature. A piece of science fiction and horror, Bandersnatch incorporates meta-commentary and rumination on free will.
+
 ### What is this? 
 A re-make of netflix's bandersnatch game as a web app created with Django. This is essentially a choose your own adventure book. All of the paths are based around netflix show black mirrow episode "Bandersnatch". This currently comes pre-loaded with one story that I created. a future feature set will be to give users the ability to create their own stories. 
 
