@@ -1,4 +1,4 @@
-# Bandersnatch
+# Bandersnatch 👾🎮
 
 <img src="images/netflix.jpg" width="1000" height="500">
 
