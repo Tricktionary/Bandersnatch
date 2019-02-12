@@ -110,7 +110,6 @@ node_modules/
 .vscode
 
 
-*.sqlite3
 .idea/
 .docx
 
